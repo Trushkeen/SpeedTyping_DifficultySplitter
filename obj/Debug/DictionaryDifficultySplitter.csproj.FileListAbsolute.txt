@@ -1,0 +1,7 @@
+A:\C#\DictionaryDifficultySplitter\bin\Debug\DictionaryDifficultySplitter.exe.config
+A:\C#\DictionaryDifficultySplitter\bin\Debug\DictionaryDifficultySplitter.exe
+A:\C#\DictionaryDifficultySplitter\bin\Debug\DictionaryDifficultySplitter.pdb
+A:\C#\DictionaryDifficultySplitter\obj\Debug\DictionaryDifficultySplitter.csprojAssemblyReference.cache
+A:\C#\DictionaryDifficultySplitter\obj\Debug\DictionaryDifficultySplitter.csproj.CoreCompileInputs.cache
+A:\C#\DictionaryDifficultySplitter\obj\Debug\DictionaryDifficultySplitter.exe
+A:\C#\DictionaryDifficultySplitter\obj\Debug\DictionaryDifficultySplitter.pdb
