@@ -41,29 +41,35 @@ namespace DictionaryDifficultySplitter
                     }
                 }
             }
-            //Console.WriteLine("Name for sorted dictionaries: ");
-            //string sortedPath = Console.ReadLine();
-            using (var sw = new StreamWriter("sorted_easy.txt", false, Encoding.Default))
+            Console.WriteLine("Name for sorted dictionaries: ");
+            string sortedPath = Console.ReadLine();
+            if (!sortedPath.Contains(".txt")) sortedPath += ".txt";
+            using (var sw = new StreamWriter(sortedPath.Replace(".txt", "_easy.txt"), false, Encoding.Default))
             {
                 foreach (var i in easyDict)
                 {
                     sw.Write(i + " ");
                 }
             }
-            using (var sw = new StreamWriter("sorted_med.txt", false, Encoding.Default))
+            using (var sw = new StreamWriter(sortedPath.Replace(".txt", "_med.txt"), false, Encoding.Default))
             {
                 foreach (var i in medDict)
                 {
                     sw.Write(i + " ");
                 }
             }
-            using (var sw = new StreamWriter("sorted_hard.txt", false, Encoding.Default))
+            using (var sw = new StreamWriter(sortedPath.Replace(".txt", "_hard.txt"), false, Encoding.Default))
             {
                 foreach (var i in hardDict)
                 {
                     sw.Write(i + " ");
                 }
             }
+            Console.WriteLine("--------------------------------");
+            Console.WriteLine($"{easyDict.Count} words in easy dictionary");
+            Console.WriteLine($"{medDict.Count} words in medium dictionary");
+            Console.WriteLine($"{hardDict.Count} words in hard dictionary");
+            Console.WriteLine("Completed.");
             Console.ReadKey();
         }
     }
