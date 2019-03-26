@@ -22,20 +22,43 @@ namespace DictionaryDifficultySplitter
                     var words = sr.ReadLine().Split();
                     foreach (string i in words)
                     {
-                        if (i.Length < 6)
+                        var line = i;
+
+                        #region replaces
+                        while (line.Contains(","))
+                            line = line.Replace(",", "");
+                        while (line.Contains("."))
+                            line = line.Replace(".", "");
+                        while (line.Contains(":"))
+                            line = line.Replace(":", "");
+                        while (line.Contains(";"))
+                            line = line.Replace(";", "");
+                        while (line.Contains("\""))
+                            line = line.Replace("\"", "");
+                        while (line.Contains("("))
+                            line = line.Replace("(", "");
+                        while (line.Contains(")"))
+                            line = line.Replace(")", "");
+                        while (line.Contains("!"))
+                            line = line.Replace("!", "");
+                        while (line.Contains("?"))
+                            line = line.Replace("?", "");
+                        #endregion
+
+                        if (line.Length < 6 && line.Length > 2)
                         {
-                            easyDict.Add(i);
-                            Console.WriteLine(i + " in easy");
+                            easyDict.Add(line);
+                            Console.WriteLine(line + " in easy");
                         }
-                        else if (i.Length < 10)
+                        else if (line.Length < 10 && line.Length > 2)
                         {
-                            medDict.Add(i);
+                            medDict.Add(line);
                             Console.WriteLine(i + " in medium");
                         }
-                        else if (i.Length < 15)
+                        else if (line.Length < 15 && line.Length > 2)
                         {
-                            hardDict.Add(i);
-                            Console.WriteLine(i + " in hard");
+                            hardDict.Add(line);
+                            Console.WriteLine(line + " in hard");
                         }
                         else Console.WriteLine("Error adding the word");
                     }
